@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('member','MemberController@index');
 
-<?php
+
 
 /*
 |--------------------------------------------------------------------------
