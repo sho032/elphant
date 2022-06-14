@@ -24,10 +24,12 @@
             <td>{{$item->age}}</td>
             <td>{{$item->birthplace}}</td>
             <td><a href="/member/show?ID={{$item->ID}}" class="btn btn-primary">詳細</a></td>
+            <td><a href="/member/del?ID={{$item->ID}}" class="btn btn-primary">削除</a></td>
         </tr>
     @endforeach
     </table>
     <a href="/member/add">メンバーの追加</a>
+    
     
 </body>
 </html>

@@ -18,7 +18,7 @@ class MemberController extends Controller
     public function  edit(Request $request)
     {
         $item = DB::table('membertb')
-        ->where('id',$request->id)->first();
+        ->where('ID',$request->ID)->first();
         return view('member.edit', ['form' => $item]);
     }
     public function update(Requwst $request)
@@ -31,20 +31,20 @@ class MemberController extends Controller
             'birthplace' => $request-> birthplace,
         ];
         DB::table('membertb')
-        ->where('id', $request->id)
+        ->where('ID', $request->ID)
         ->update($param);
         return redirect('/member');
     }
     public function del(Request $request)
     {
         $item = DB::table('membertb')
-        ->where('id',$request->id)->first();
+        ->where('ID',$request->ID)->first();
         return view('member.del', ['form' => $item]);
     }
     public function remove(Request $request)
     {
         DB::table('membertb')
-        ->where('id',$request->id)->delete();
+        ->where('ID',$request->ID)->delete();
         return redirect('/member');
     }
 
