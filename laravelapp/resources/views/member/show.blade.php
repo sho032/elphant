@@ -31,7 +31,7 @@
         </tr>
         
     </table>
-    <a href="member">ホームに戻る</a>
+    <a href="/member/">ホームに戻る</a>
     
 </body>
 </html>

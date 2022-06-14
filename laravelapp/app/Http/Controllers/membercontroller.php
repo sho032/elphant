@@ -37,14 +37,14 @@ class MemberController extends Controller
     }
     public function del(Request $request)
     {
-        $item = DB::table('nogizakatable')
-        ->where('ID',$request->ID)->first();
-        return view('member.del', ['form' => $item]);
+        $param = ['ID' => $request->ID];
+        $item = DB::select('select * from nogizakatable where ID = :ID', $param);
+        return view('member.del', ['form' => $item[0]]);
     }
     public function remove(Request $request)
     {
-        DB::table('nogizakatable')
-        ->where('ID',$request->ID)->delete();
+        $param = ['ID' => $request->ID];
+        DB::delete('delete from people where ID = :ID', $param);
         return redirect('/member');
     }
 
