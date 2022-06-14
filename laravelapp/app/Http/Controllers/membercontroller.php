@@ -11,17 +11,17 @@ class MemberController extends Controller
 {
     public function index(Request $request)
     {
-        $items = DB::select('select * from membertb');
+        $items = DB::select('select * from nogizakatable');
         return view('member.index', ['items' => $items]);
     }
 
     public function  edit(Request $request)
     {
-        $item = DB::table('membertb')
+        $item = DB::table('nogizakatable')
         ->where('ID',$request->ID)->first();
         return view('member.edit', ['form' => $item]);
     }
-    public function update(Requwst $request)
+    public function update(Request $request)
     {
         $param = [
             'ID' => $request->ID,
@@ -30,20 +30,20 @@ class MemberController extends Controller
             'age' => $request->age,
             'birthplace' => $request-> birthplace,
         ];
-        DB::table('membertb')
+        DB::table('nogizakatable')
         ->where('ID', $request->ID)
         ->update($param);
         return redirect('/member');
     }
     public function del(Request $request)
     {
-        $item = DB::table('membertb')
+        $item = DB::table('nogizakatable')
         ->where('ID',$request->ID)->first();
         return view('member.del', ['form' => $item]);
     }
     public function remove(Request $request)
     {
-        DB::table('membertb')
+        DB::table('nogizakatable')
         ->where('ID',$request->ID)->delete();
         return redirect('/member');
     }
@@ -82,7 +82,7 @@ class MemberController extends Controller
 
         //  (:ID, :name, :birthday, :age, :birthplace)', $param);
 
-        DB::table('membertb')->insert($param);
+        DB::table('nogizakatable')->insert($param);
 
         return redirect('/member');
 
@@ -99,7 +99,7 @@ class MemberController extends Controller
 
         $ID = $request->ID;
 
-        $item = DB::table('membertb')->where('ID', $ID)->first();
+        $item = DB::table('nogizakatable')->where('ID', $ID)->first();
 
         return view('member.show', ['item' => $item]);
 
