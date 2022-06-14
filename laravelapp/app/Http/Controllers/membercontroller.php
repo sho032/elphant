@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 class MemberController extends Controller
 {
@@ -12,6 +14,7 @@ class MemberController extends Controller
         $items = DB::select('select * from membertb');
         return view('member.index', ['items' => $items]);
     }
+
     public function  edit(Request $request)
     {
         $item = DB::table('membertb')
@@ -43,5 +46,23 @@ class MemberController extends Controller
         DB::table('membertb')
         ->where('id',$request->id)->delete();
         return redirect('/member');
+    }
+
+    public function add(Request $request){
+        return view('member.add');
+    }
+
+    public function create(Request $request){
+        $param=[
+                'name'=>$request->name,
+                'birthday'=>$request->birthday,
+                'age'=> $request->age,
+                'birthplace'=> $request->birthplace,
+        
+        ];
+        DB::table('membertb')->insert($param);
+        return redirect('/member');
+
+
     }
 }
