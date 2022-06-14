@@ -37,4 +37,4 @@ Route::get('/', function () {
 Route::get('member', 'MemberController@index');
 
 Route::get('member/add','memberController@add');
-Route::post('member/add','memberController@add');
+Route::post('member/add','memberController@create');
