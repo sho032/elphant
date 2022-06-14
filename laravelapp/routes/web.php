@@ -44,3 +44,5 @@ Route::post('member/update','MemberController@update');
 
 Route::get('member/del','MemberController@del');
 Route::post('member/remove','MemberController@remove');
+
+Route::get('member/show','MemberController@show');

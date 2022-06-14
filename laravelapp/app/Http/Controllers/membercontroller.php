@@ -101,7 +101,7 @@ class MemberController extends Controller
 
         $item = DB::table('membertb')->where('ID', $ID)->first();
 
-        return view('show', ['item' => $item]);
+        return view('member.show', ['item' => $item]);
 
     }
 }
