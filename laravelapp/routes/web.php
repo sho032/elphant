@@ -36,11 +36,11 @@ Route::get('/', function () {
 
 Route::get('member', 'MemberController@index');
 
-Route::get('member/add','memberController@add');
-Route::post('member/add','memberController@create');
+Route::get('member/add','MemberController@add');
+Route::post('member/add','MemberController@create');
 
-Route::get('member/edit','memberController@edit');
-Route::post('member/update','memberController@update');
+Route::get('member/edit','MemberController@edit');
+Route::post('member/update','MemberController@update');
 
-Route::get('member/del','memberController@del');
-Route::post('member/remove','memberController@remove');
+Route::get('member/del','MemberController@del');
+Route::post('member/remove','MemberController@remove');
