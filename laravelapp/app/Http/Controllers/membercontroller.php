@@ -48,21 +48,60 @@ class MemberController extends Controller
         return redirect('/member');
     }
 
-    public function add(Request $request){
+    public function add(Request $request) //add
+
+    {
+
         return view('member.add');
+
     }
 
-    public function create(Request $request){
+
+
+    public function create(Request $request)
+
+    {
+
         $param=[
+
+                'ID'=>$request->ID,
+
                 'name'=>$request->name,
+
                 'birthday'=>$request->birthday,
+
                 'age'=> $request->age,
+
                 'birthplace'=> $request->birthplace,
-        
+
+       
+
         ];
+
+        // DB::insert('insert into membertb (ID, name, birthday, age, birthplace) values
+
+        //  (:ID, :name, :birthday, :age, :birthplace)', $param);
+
         DB::table('membertb')->insert($param);
+
         return redirect('/member');
 
+    }
+
+
+
+
+
+
+    public function show(Request $request)
+
+    {
+
+        $ID = $request->ID;
+
+        $item = DB::table('membertb')->where('ID', $ID)->first();
+
+        return view('show', ['item' => $item]);
 
     }
 }
