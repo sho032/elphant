@@ -27,6 +27,7 @@
         </tr>
     @endforeach
     </table>
+    <a href="{{ route('add') }}">メンバーの追加</a>
     
 </body>
 </html>
