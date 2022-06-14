@@ -23,11 +23,11 @@
             <td>{{$item->birthday}}</td>
             <td>{{$item->age}}</td>
             <td>{{$item->birthplace}}</td>
-            <td><a href="" class="btn btn-primary">詳細</a></td>
+            <td><a href="/member/show?ID={{$item->ID}}" class="btn btn-primary">詳細</a></td>
         </tr>
     @endforeach
     </table>
-    <a href="{{ route('add') }}">メンバーの追加</a>
+    <a href="/member/add">メンバーの追加</a>
     
 </body>
 </html>
