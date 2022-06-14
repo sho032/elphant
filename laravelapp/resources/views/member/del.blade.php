@@ -47,7 +47,7 @@
            <td>{{$form->birthday}}</td>
            <td>{{$form->age}}</td> 
            <td>{{$form->birthplace}}</td> 
-           <input type ="hidden" name="ID" value ="{{$form->ID}">
+           <input type ="hidden" name="ID" value ="{{$form->ID}}">
        </tr>
    </table>
    <input type="submit" value="削除"></td>
