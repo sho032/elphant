@@ -27,7 +27,7 @@ public function create(Request $request){
                 'birthplace'=> $request->birthplace,
         
         ];
-        DB::table('member')->insert($param);
+        DB::table('membertb')->insert($param);
         return redirect('/member');
 
 }
