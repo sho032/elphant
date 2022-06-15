@@ -32,6 +32,7 @@
         
     </table>
     <a href="/member/del2?ID={{$item->ID}}">削除</a>
+    <a href="/member/edit?ID={{$item->ID}}">変更</a>
     <a href="/member/">ホームに戻る</a>
     
 </body>

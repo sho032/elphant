@@ -40,7 +40,7 @@ Route::get('member/add','MemberController@add');
 Route::post('member/add','MemberController@create');
 
 Route::get('member/edit','MemberController@edit');
-Route::post('member/update','MemberController@update');
+Route::post('member/edit','MemberController@update');
 
 //Route::get('member/del','MemberController@del');
 //Route::post('member/remove','MemberController@remove');
