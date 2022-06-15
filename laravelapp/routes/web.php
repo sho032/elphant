@@ -42,7 +42,9 @@ Route::post('member/add','MemberController@create');
 Route::get('member/edit','MemberController@edit');
 Route::post('member/update','MemberController@update');
 
-Route::get('member/del','MemberController@del');
-Route::post('member/remove','MemberController@remove');
+//Route::get('member/del','MemberController@del');
+//Route::post('member/remove','MemberController@remove');
 
 Route::get('member/show','MemberController@show');
+
+Route::get('member/del2','MemberController@del2');

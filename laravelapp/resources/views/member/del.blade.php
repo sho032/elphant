@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,27 +9,27 @@
 <body>
 <form action = "/member/del" method = "post">
 <table>
-    @csrf
-        <tr>
+        @csrf
+        <input type="hidden" name="ID" value="{{form->ID}}">
+        <!-- <tr>
             <th>ID</th>
             <td>{{$item->ID}}</td>
-        </tr> 
-        <!-- <input type='hidden' name='ID' value="{{$item->ID}}"> -->
+        </tr>  -->
         <tr>
             <th>氏名</th>
-            <td>{{$item->name}}</td>
+            <td>{{$form->name}}</td>
         </tr>
         <tr>
             <th>生年月日</th>
-            <td>{{$item->birthday}}</td>
+            <td>{{$form->birthday}}</td>
         </tr>
         <tr>
             <th>年齢</th>
-            <td>{{$item->age}}</td>
+            <td>{{$form->age}}</td>
         </tr>
         <tr>       
             <th>出身</th>
-            <td>{{$item->birthplace}}</td>
+            <td>{{$->birthplace}}</td>
         </tr>
         <tr>
             <th></th>
@@ -59,4 +59,4 @@
     
 </body>
 </html>
-
+ -->

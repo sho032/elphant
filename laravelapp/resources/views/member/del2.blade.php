@@ -8,31 +8,30 @@
 </head>
 <body>
 
-    <table>
+<table>
+<table>
+     <tr>
+        <th>id</th>
+        <th>氏名</th>
+        <th>生年月日</th>
+        <th>年齢</th>
+        <th>出身</th>
+    </tr>
+    @foreach ($items as $item)
         <tr>
-            <th>ID</th>
             <td>{{$item->ID}}</td>
-        </tr>
-        <tr>
-            <th>氏名</th>
             <td>{{$item->name}}</td>
-        </tr>
-        <tr>
-            <th>生年月日</th>
             <td>{{$item->birthday}}</td>
-        </tr>
-        <tr>
-            <th>年齢</th>
             <td>{{$item->age}}</td>
-        </tr>
-        <tr>       
-            <th>出身</th>
             <td>{{$item->birthplace}}</td>
+            <td><a href="/member/show?ID={{$item->ID}}" class="btn btn-primary">詳細</a></td>
+            <td><a href="/member/del?ID={{$item->ID}}" class="btn btn-primary">削除</a></td>
         </tr>
-        
+    @endforeach
     </table>
-    <a href="/member/del2?ID={{$item->ID}}">削除</a>
-    <a href="/member/">ホームに戻る</a>
+
+</table>
+<a href="/member/">ホームに戻る</a>
     
 </body>
 </html>
