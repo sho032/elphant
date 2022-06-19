@@ -48,3 +48,5 @@ Route::post('member/edit','MemberController@update');
 Route::get('member/show','MemberController@show');
 
 Route::get('member/del2','MemberController@del2');
+
+//Route::get('hotel', 'HotelController@index')
