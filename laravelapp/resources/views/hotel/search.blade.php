@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
-    <a href="hotel/login">login</a>
+    <title>部屋検索</title>
 </head>
 <body>
-    <!-- <p><img src"" alt="hotelの写真"  -->
-    <a href="/hotel/search">部屋の予約状況の確認</a>
+
 </body>
 </html>
