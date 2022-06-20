@@ -53,3 +53,6 @@ Route::get('member/del2','MemberController@del2');
 
 //--------------------ホテル予約システム------------------------------
 Route::get('home', 'HotelController@home');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
