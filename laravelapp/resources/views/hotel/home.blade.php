@@ -11,4 +11,8 @@
     <!-- <p><img src"" alt="hotelの写真"  -->
     <a href="/hotel/search">部屋の予約状況の確認</a>
 </body>
+
+<foter>
+    <p>☎0123-012-0003</p>
+</foter>
 </html>
