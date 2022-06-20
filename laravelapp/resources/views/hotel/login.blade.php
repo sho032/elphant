@@ -12,8 +12,8 @@
 <form action="/hotel/login" method="post">
             <table>
                     @csrf
-                    <tr><th>TEL: </th><td><input type="tel" name="tel"></td></tr>
-                    <tr><th>パスワード: </th><td><input type="password" name="name"></td></tr>
+                    <tr><th>email: </th><td><input type="email" name="email"></td></tr>
+                    <tr><th>パスワード: </th><td><input type="password" name="password"></td></tr>
                     <tr><th></th><td><input type="submit" value="login"></td></tr>
                 
             </table>
