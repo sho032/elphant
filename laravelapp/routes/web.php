@@ -50,3 +50,6 @@ Route::get('member/show','MemberController@show');
 Route::get('member/del2','MemberController@del2');
 
 //Route::get('hotel', 'HotelController@index')
+
+//--------------------ホテル予約システム------------------------------
+Route::get('home', 'HotelController@home');
