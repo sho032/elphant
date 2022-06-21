@@ -8,6 +8,6 @@
         
     </head>
     <body>
-        <a href="/hotel/search">部屋の予約状況の確認</a>
+        <a href="/hotel/find">部屋の予約状況の確認</a>
     </body>
 </html>
