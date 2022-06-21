@@ -13,7 +13,7 @@
                     @csrf
                     <tr><th>チェックイン日: </th><td><input type="date" name="check" value="{{$check}}" ></td></tr>
                     <tr><th>泊数: </th><td><input type="int" name="stay" value="{{$stay}}" ></td></tr>
-                    <tr><td><input type="hidden" name="userid" value="{{$id}}"></td></tr>
+                    <tr><td><input type="hidden" name="userid" value="{{$userid}}"></td></tr>
                     <tr><td><input type="hidden" name="roomid" value="{{$roomid}}"></td></tr>
                     <tr><th></th><td><input type="submit" value="予約"></td></tr>         
             </table>
