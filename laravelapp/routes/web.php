@@ -55,4 +55,8 @@ Route::get('member/del2','MemberController@del2');
 Route::get('home', 'HotelController@home');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('hotel/search', 'HotelController@find');
+Route::post('hotel/search', 'HotelController@search');
+
+Route::get('/', 'HomeController@index')->name('home');
+
