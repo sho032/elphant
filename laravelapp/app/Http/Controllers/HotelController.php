@@ -17,16 +17,15 @@ class HotelController extends Controller
     public function find(Request $request)
     {
 
-    return view('hotel.search',['cheak' => '']);
+    return view('hotel.search',['check' => '']);
     }
 
     public function search(Request $request)
-    {
-        $cheak=$request -> cheak;
-        $item = reserve::find($request->cheak);
-        $param = ['cheak' => $request-> $item];
-
-        return view('hotel.search', $param);
+    {       
+        //$item = Reserve::find($request->check);
+        $item = Reserve::where('check', $request->check)->first();
+        $param = ['check' => $request-> check, 'item'=>$item];
+        return view('hotel.find', $param);
     }
 
 }
