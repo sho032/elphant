@@ -57,6 +57,7 @@ Auth::routes();
 
 Route::get('hotel/find', 'HotelController@find');
 Route::post('hotel/find', 'HotelController@search');
+Route::get('hotel/reserve', 'HotelController@reserve');
 
 //Route::get('/', 'HomeController@index')->name('home');
 

@@ -28,4 +28,9 @@ class HotelController extends Controller
         return view('hotel.find', $param);
     }
 
+    public function reserve(Request $request)
+    {
+        return view('hotel.reserve');
+    }
+
 }

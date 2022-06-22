@@ -8,7 +8,7 @@
     <!-- <a href="hotel/login">メンバーの追加</a> -->
 </head>
 <body>
-<form action="/hotel/reserv" method="post">
+<form action="/hotel/reserve" method="post">
     @if(Auth::check())
     {{$user->userid}}
     @endif
