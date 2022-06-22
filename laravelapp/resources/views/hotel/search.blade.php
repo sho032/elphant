@@ -25,6 +25,8 @@
         </table>
     
     @endif 
+
+    <a href="/hotel/reserve">予約ページ</a>
     
 </body>
 </html>
